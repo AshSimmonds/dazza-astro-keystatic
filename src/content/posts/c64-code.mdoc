@@ -1,0 +1,35 @@
+---
+title: c64 code
+---
+Certainly! Here's a basic example of C64 code that displays a message on the screen and waits for a key press:
+
+mipsasm
+
+Copy
+
+```
+; Basic C64 Code Example
+; Display Message and Wait for Key Press
+
+    lda #<message    ; Load the low byte of the message address
+    ldy #>message    ; Load the high byte of the message address
+    jsr $ab1e        ; Print the message on the screen
+
+wait_for_key:
+    jsr $fded        ; Wait for a key press
+    bne wait_for_key ; Branch if no key is pressed
+
+    rts              ; Return from the subroutine
+
+message:
+    .text "Hello, C64!"
+
+    .byte 0          ; Null-terminated string
+
+    .end
+
+```
+
+This code defines a message string, "Hello, C64!", and uses the&nbsp;`jsr $ab1e`&nbsp;instruction to print the message on the screen. It then enters a loop that waits for a key press using the&nbsp;`jsr $fded`&nbsp;instruction. If no key is pressed, it continues to wait. Once a key is pressed, the program exits the loop and returns from the subroutine.
+
+Please note that this code assumes you are assembling it with the ACME cross-assembler. The memory addresses used for printing and key input (`$ab1e`&nbsp;and&nbsp;`$fded`) are specific to the C64 platform.
