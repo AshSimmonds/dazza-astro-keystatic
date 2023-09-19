@@ -2,6 +2,8 @@
 
 pls redeploy with env vars - fooking graphql blah
 
+POOSH IT RILL GOOD
+
 This template shows how you can use Keystatic in an Astro site.
 
 To setup:
