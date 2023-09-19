@@ -1,5 +1,7 @@
 # Keystatic in Astro
 
+pls redeploy with env vars
+
 This template shows how you can use Keystatic in an Astro site.
 
 To setup:
