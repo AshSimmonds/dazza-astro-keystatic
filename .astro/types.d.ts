@@ -211,6 +211,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".mdoc"] };
+"image-teste01.mdoc": {
+	id: "image-teste01.mdoc";
+  slug: "image-teste01";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".mdoc"] };
 "z0001-can-t-modify-front-page-in-admin-ui-hmm.mdoc": {
 	id: "z0001-can-t-modify-front-page-in-admin-ui-hmm.mdoc";
   slug: "z0001-can-t-modify-front-page-in-admin-ui-hmm";
