@@ -183,6 +183,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
+"about.mdoc": {
+	id: "about.mdoc";
+  slug: "about";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".mdoc"] };
 "add-a-noo-er-poost.mdoc": {
 	id: "add-a-noo-er-poost.mdoc";
   slug: "add-a-noo-er-poost";
@@ -193,6 +200,13 @@ declare module 'astro:content' {
 "asdf.mdoc": {
 	id: "asdf.mdoc";
   slug: "asdf";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".mdoc"] };
+"c64-code.mdoc": {
+	id: "c64-code.mdoc";
+  slug: "c64-code";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
